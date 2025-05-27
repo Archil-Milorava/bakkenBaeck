@@ -1,13 +1,32 @@
+import ListItems from "../features/Landing/ListItems";
+import LogoSlider from "../features/Landing/LogoSlider";
 import NavbarMain from "../features/navabar/NavbarMain";
-
-const bgImage =
-  "https://plus.unsplash.com/premium_photo-1675748283204-22940562d00d?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
+import bgVideo from "../assets/bgVideo.mp4";
 
 const Landing = () => {
   return (
-    <main className="w-full min-h-screen h-auto p-0 m-0 overflow-hidden bg-green-300  font-BBsans">
+    <main className="w-full min-h-screen h-auto p-0 m-0 overflow-hidden font-BBsans">
       <NavbarMain />
-      <div className={`w-full h-[50rem] overflow-hidden  bg-[url(${bgImage})]`}></div>
+
+      <div className=" h-[45rem] w-full overflow-hidden">
+        <video
+          src={bgVideo}
+          className="w-full h-full object-cover "
+          loop
+          autoPlay
+          playsInline
+          muted
+        ></video>
+      </div>
+
+      <h1 className="w-auto sm:max-w-[80%] px-3 text-2xl sm:text-3xl lg:text-6xl mt-12">
+        <span className="opacity-50">Bakken & Bæck</span> is a design and
+        technology studio. We build digital products, from zero to launch.
+      </h1>
+
+      <LogoSlider />
+
+      <ListItems />
     </main>
   );
 };
