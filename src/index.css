@@ -1,0 +1,19 @@
+@font-face {
+  font-family: BBsans;
+  src: url("../src/assets/bb-sans.ttf");
+
+}
+
+@theme {
+  --font-BBsans: BBsans, sans-serif;
+
+  --color-primary: #ffd106;
+  --color-dark: #212121;
+
+  --color-palette: {
+    primary: var(--color-primary);
+    dark: var(--color-dark);
+  }
+}
+
+@import "tailwindcss";
