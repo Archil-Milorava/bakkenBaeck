@@ -1,0 +1,52 @@
+import GridCard from "./GridCard";
+
+const GridMain = () => {
+  return (
+    <main className="min-h-screen w-full grid grid-cols-1  md:grid-cols-3 gap-2 p-2">
+      {projects.map((prj, i) => (
+        <GridCard key={i} {...prj} />
+      ))}
+    </main>
+  );
+};
+
+export default GridMain;
+
+const projects = [
+  {
+    name: "CoinTracker",
+    categories: ["Website", "Motion design", "AI"],
+    video:
+      "https://assets.bakkenbaeck.com/v6/da4fcf9757e25385481c8a76f7dbda2a826e9b19.mp4#t=0.001",
+  },
+  {
+    name: "sierra",
+    categories: ["product", "brand", "strategy"],
+    video:
+      "https://assets.bakkenbaeck.com/v6/b102ec7023b1fe8a6a4c0de0c148caedf060d3df.mp4#t=0.001",
+  },
+  {
+    name: "Google Deepmind",
+    categories: ["Narrative", "Motion design", "AI"],
+    video:
+      "https://assets.bakkenbaeck.com/v6/da4fcf9757e25385481c8a76f7dbda2a826e9b19.mp4#t=0.001",
+  },
+  {
+    name: "Pio",
+    categories: ["Product", "Narrative", "Strategy"],
+    video:
+      "https://assets.bakkenbaeck.com/v6/9ab7a5dbcb95c4517dd47cec444b448210b4b860.mp4#t=0.001",
+  },
+  {
+    name: "Phantom",
+    categories: ["Product", "Narrative", "Strategy"],
+    video:
+      "https://assets.bakkenbaeck.com/v6/cbf7e12d858be1d304d057f171cb5501f900799d.mp4#t=0.001",
+  },
+  {
+    name: "Ramp",
+    categories: ["Motion Design", "Brand", "Motion design"],
+    video:
+      "https://assets.bakkenbaeck.com/v6/a7b5d12dbdd78152a54e896cdffbfa9b52127a58.mp4#t=0.001",
+  },
+];

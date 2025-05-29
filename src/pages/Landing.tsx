@@ -2,6 +2,7 @@ import ListItems from "../features/Landing/ListItems";
 import LogoSlider from "../features/Landing/LogoSlider";
 import NavbarMain from "../features/navabar/NavbarMain";
 import bgVideo from "../assets/bgVideo.mp4";
+import GridMain from "../features/Landing/GridMain";
 
 const Landing = () => {
   return (
@@ -27,6 +28,8 @@ const Landing = () => {
       <LogoSlider />
 
       <ListItems />
+
+      <GridMain />
     </main>
   );
 };
