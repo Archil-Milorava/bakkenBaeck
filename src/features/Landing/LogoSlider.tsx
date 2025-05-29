@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Marquee from "react-fast-marquee";
+import { Link } from "react-router-dom";
 
 const LogoSlider = () => {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
@@ -8,7 +9,8 @@ const LogoSlider = () => {
     <div className="my-[5rem]">
       <Marquee speed={55} pauseOnHover>
         {logoImages.map((logo, index) => (
-          <div
+          <Link
+            to={"/clients"}
             key={index}
             className="relative h-[6rem] w-[12rem] lg:h-[8rem] lg:w-[15rem] mx-1 flex items-center justify-center"
             onMouseEnter={() => setHoveredIndex(index)}
@@ -31,7 +33,7 @@ const LogoSlider = () => {
             >
               See all
             </div>
-          </div>
+          </Link>
         ))}
       </Marquee>
     </div>
