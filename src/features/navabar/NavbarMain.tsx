@@ -35,31 +35,31 @@ const NavbarMain = () => {
       {/* Navigation Links */}
       <div className="flex gap-4 sm:gap-6 ">
         <Link
-          to="/"
+          to="/clients"
           className="text-sm sm:text-md hover:opacity-50 transition-all duration-300"
         >
           Work
         </Link>
         <Link
-          to="/"
+          to="/clients"
           className="text-sm sm:text-md hover:opacity-50 transition-all duration-300"
         >
           About
         </Link>
         <Link
-          to="/"
+          to="/clients"
           className="text-sm sm:text-md hover:opacity-50 transition-all duration-300"
         >
           Team
         </Link>
         <Link
-          to="/"
+          to="/clients"
           className="text-sm sm:text-md hover:opacity-50 transition-all duration-300"
         >
           Journal
         </Link>
         <Link
-          to="/"
+          to="/clients"
           className="text-sm sm:text-md hover:opacity-50 transition-all duration-300"
         >
           Clients
