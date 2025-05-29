@@ -8,7 +8,7 @@ const Landing = () => {
     <main className="w-full min-h-screen h-auto p-0 m-0 overflow-hidden font-BBsans">
       <NavbarMain />
 
-      <div className=" h-[45rem] w-full overflow-hidden">
+      <div className="h-[20rem] md:h-[37rem]   w-full overflow-hidden">
         <video
           src={bgVideo}
           className="w-full h-full object-cover "

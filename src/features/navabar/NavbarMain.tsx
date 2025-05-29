@@ -1,8 +1,33 @@
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 const NavbarMain = () => {
+  const [hideNavbar, setHideNavbar] = useState(false);
+  const [lastScrollY, setLastScrollY] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      if (currentScrollY > lastScrollY && currentScrollY > 200) {
+        setHideNavbar(true);
+        setLastScrollY(currentScrollY);
+      } else if (currentScrollY < lastScrollY) {
+        setHideNavbar(false);
+        setLastScrollY(currentScrollY);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [lastScrollY]);
+
   return (
-    <div className="fixed z-[9999] h-8 w-full max-w-[90%] sm:max-w-[80%] md:max-w-[25rem] left-4 top-6 bg-white/30 backdrop-blur-md flex items-center justify-around rounded-md">
+    <div
+      className={`fixed z-[9999] h-8 w-full max-w-[90%] sm:max-w-[80%] md:max-w-[25rem] left-4 top-6 bg-white/30 backdrop-blur-md flex items-center justify-around rounded-md transition-transform duration-300 ease-in-out ${
+        hideNavbar ? "-translate-y-20" : "translate-y-0"
+      }`}
+    >
       {/* Logo (BB) */}
       <Link
         to="/"
