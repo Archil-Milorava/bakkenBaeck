@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import Logo from "./Logo";
 
 const NavbarMain = () => {
   const [hideNavbar, setHideNavbar] = useState(false);
@@ -24,25 +25,15 @@ const NavbarMain = () => {
 
   return (
     <div
-      className={`fixed z-[9999] h-8 w-full max-w-[90%] sm:max-w-[80%] md:max-w-[25rem] left-4 top-6 bg-white/30 backdrop-blur-md flex items-center justify-around rounded-md transition-transform duration-300 ease-in-out ${
+      className={`fixed z-[9999] h-8 w-full max-w-[90%] sm:max-w-[80%] md:max-w-[25rem] left-4 top-6 bg-gray-200/30 backdrop-blur-lg flex items-center justify-around rounded-md transition-transform duration-300 ease-in-out ${
         hideNavbar ? "-translate-y-20" : "translate-y-0"
       }`}
     >
       {/* Logo (BB) */}
-      <Link
-        to="/"
-        className="flex gap-1 cursor-pointer hover:opacity-50 transition-opacity duration-500"
-      >
-        <span className="font-semibold border-2 rounded-full w-5 h-5 text-sm flex items-center justify-center">
-          B
-        </span>
-        <span className="font-semibold border-2 rounded-full w-5 h-5 text-sm flex items-center justify-center">
-          B
-        </span>
-      </Link>
+      <Logo />
 
       {/* Navigation Links */}
-      <div className="flex gap-4 sm:gap-6">
+      <div className="flex gap-4 sm:gap-6 ">
         <Link
           to="/"
           className="text-sm sm:text-md hover:opacity-50 transition-all duration-300"
